@@ -54,7 +54,7 @@ In order to pass the unit tests, the project must fulfill the following user sto
 ## Technical Documentation
 
 - HTML and CSS
-- Text was written with the assistance of ChatGBT
+- Text was written with the assistance of ChatGPT
 
 
 
