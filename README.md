@@ -1,5 +1,7 @@
 # Technical Documentation Page
 
+LINK: https://guzlis.github.io/fcc_technical_documentation_page/
+
 This project is the third project of the FreeCodeCamp "Responsive Web Design" course. The objective is to build a technical documentation page that is functionally similar to [https://technical-documentation-page.freecodecamp.rocks](https://technical-documentation-page.freecodecamp.rocks).
 
 ## Project Overview
