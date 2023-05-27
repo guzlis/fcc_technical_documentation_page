@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>-
+  <nav id="navbar">
+    <header>CSS Documentation Page</header>
+      <ul>
+        <li>
+          <a class ="nav-link" href="#intro_to_css">Intro to CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#required_know_how">Required Know How</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#history_of_css">History of CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#basic_syntax">Basic Syntax</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#selectors">Selectors</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#common_properties">Common Properties</a>
+        </li>
+        <li>
+        <a class="nav-link" href="#linking_our_html_and_css">Linking our HTML and CSS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#references">References</a>
+        </li>
+      </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="intro_to_css">
+      <header>Intro to CSS</header>
+      <p>CSS (Cascading Style Sheets) is a fundamental technology in web development that controls the visual presentation of HTML elements on a webpage, allowing designers and developers to define styles such as layout, colors, fonts, and sizes, ultimately enhancing the overall look and feel of websites.</p>
+    </section>
+    <section class="main-section" id="required_know_how">
+      <header>Required Know How</header>
+      <ul>
+        <li>A basic understanding of the HyperText Markup Language (HTML)</li>
+        <li>A general understanding of the Internet and the World Wide Web</li>
+      </ul>
+    </section>
+    <section class="main-section" id="history_of_css">
+      <header>History of CSS</header>
+      <p>CSS (Cascading Style Sheets) has a rich history that spans several decades. It emerged as a solution to the growing complexity of styling web pages and played a crucial role in separating the presentation layer from the content layer, making web design more flexible and maintainable.</p>
+      <p>In the late 1990s, CSS1 was introduced as a specification by the World Wide Web Consortium (W3C). It provided a basic set of styling capabilities, allowing developers to define fonts, colors, and layout properties. However, browser support for CSS1 was inconsistent, leading to compatibility issues and limiting its widespread adoption.</p>
+      <p>To address these challenges, CSS2 was developed and released in 1998. It introduced new features like positioning, floats, and z-index, expanding the possibilities for web layout and design. CSS2 also introduced media types, enabling different stylesheets to be applied based on the device or medium used to view the content, such as print or screen.</p>
+      <p>The release of CSS3 marked a significant milestone in the evolution of CSS. Rather than a single specification, CSS3 introduced a modular approach, allowing for the development and adoption of individual modules independently. This approach enabled faster innovation and implementation of new features. CSS3 modules covered a wide range of enhancements, including rounded corners, gradients, transitions, animations, and responsive design capabilities. However, due to the large number of modules, browser support for CSS3 features varied, requiring developers to use vendor-specific prefixes and fallbacks.</p>
+      <p>In recent years, CSS has continued to evolve, with new features being added and browser support improving. This evolution has focused on enhancing layout capabilities with specifications like Flexbox and Grid, making it easier to create responsive and dynamic web layouts. Additionally, CSS preprocessors and postprocessors, such as Sass and PostCSS, have gained popularity, offering extended functionality and improved workflow for developers.</p>
+      <p>Overall, CSS has come a long way since its inception, revolutionizing web design and empowering developers to create visually appealing and engaging websites with greater control over presentation and layout.</p>
+    </section>
+    <section class="main-section" id="basic_syntax">
+      <header>Basic Syntax</header>
+      <p>The basic syntax of CSS (Cascading Style Sheets) consists of <bold>selectors, properties, and values.</bold> Selectors target specific HTML elements, while properties define the styling attributes, and values specify the desired settings for those attributes.</p>
+     <ul>
+      <li><bold>Selectors:</bold> Selectors determine which HTML elements on a webpage will be styled. They can be based on element types (e.g.<code>&lt;p&gt;</code>  for paragraphs), class names (e.g., <code>".my-class"</code>), IDs (e.g. <code>"#my-id"</code>), or other attributes (e.g. <code>"[attribute="value"]"</code>). Selectors can also be combined or nested to target specific elements or groups of elements. We will look at some of the different types of selectors later on.</li>
+      <li><bold>Properties:</bold> Properties define the specific styling attributes that will be applied to the selected elements. Examples of properties include: <code>color</code> for text color <code>font-size</code> for the size of the font <code>margin</code> for spacing around an element and <code>background-color</code> for the background color of an element.</li>
+      <li><bold>Values:</bold> Values are assigned to properties and determine how the selected elements will be styled. For instance: <code>color: blue;</code> assigns the color blue to the text. <code>font-size: 16px;</code> sets the font size to 16 pixels. Values can be specified in various units, such as pixels (px), percentages (%), or named colors (red, green, etc.).</p>
+      <p>CSS rules are written within curly braces (<code>{}</code>), and each rule consists of a selector followed by one or more property-value pairs. Multiple rules can be grouped together within a CSS file or embedded within an HTML document using the "style" tags.</li>
+      <p>In CSS, you can write a comment by using the <code>/* */ </code>syntax.</p>
+    </ul>
+      <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg" alt="a visual demonstration of basic CSS syntax">
+    </section>
+    <section class="main-section" id="selectors">
+      <header>Selectors</header>
+      <p>CSS selectors are like magic words that tell the computer which parts of a webpage to change the colors, sizes, and other things. They help the computer find specific elements, like headings or buttons, to give them special looks. It's like telling the computer, "Make all the buttons blue," or "Make the big titles bold and green." By using these magic words, we can make websites look just the way we want them to.</p>
+      <ul>
+      <li>A <b>Universal Selector</b> is like a wild card that matches and selects all elements on a webpage. It uses the <b>asterisk <code>(*)</code></b> symbol as its selector. When we apply styles to the Universal Selector, those styles will affect every single element on the page. It's like telling the computer, "Hey, change everything in the same way!" This can be useful when we want to apply a certain style globally or reset default styles for all elements. However, we should use it carefully, as it can have a broad impact on the entire webpage.
+        <pre><code class="code-demo">
+          * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+            }
+        </code></pre>
+        In this example, the CSS code selects all elements using the Universal selector (*) and applies the following styles:
+        <ul>
+          <li><code>margin: 0;</code> sets the margin of all elements to zero.</li>
+          <li><code>padding: 0;</code> sets the padding of all elements to zero.</li>
+          <li><code>box-sizing: border-box;</code>sets the box-sizing property of all elements to "border-box," which ensures that the total width and height of an element include its padding and border.</li>
+        </ul>
+      </li>
+      <li>A <b>Type Selector</b> selects elements based on their <b>HTML tag names</b>. It's like telling the computer, "I want to style all elements of a specific type." For example, if we use the selector <code>p</code>, it will target and style all paragraph elements on the webpage. Type Selectors are handy when we want to apply a style to a particular type of element consistently throughout the page, such as changing the font or color of all headings. By specifying the tag name, we can easily target and modify elements of that type to create a cohesive and uniform design.
+        <pre><code>
+          p {
+            color: blue;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            }
+        </code></pre>
+        In this example, the CSS code selects all <p> elements and applies the following styles:
+          <ul>
+            <li><code>color: blue;</code> sets the text color of all <code>&lt;p&gt;</code> elements to blue.</li>
+            <li><code>font-size: 16px;</code>sets the font size of all <code>&lt;p&gt;</code> elements to 16 pixels.</li>
+            <li><code>font-family: Arial, sans-serif;</code> sets the font family of all <code> &lt;p&gt; </code> elements to Arial or any sans-serif font.</li>
+          </ul>
+      </li>
+      <li>A <b>Class Selector</b> is like a special label that we can give to certain elements on a webpage. It's like saying, "Hey, I want to style only elements with this special label!" We create a class by adding a <b>dot <code>(.)</code></b> before its name, like <code></code>. We can then apply styles specifically to elements with that class by using the class selector. Class Selectors are useful when we want to style specific elements separately from others, like giving a unique color or background to certain buttons or creating a specific style for a particular section. 
+       <p> HTML:</p>
+          <pre>
+            <code>&lt;p class="my-class"&gt;This paragraph has the class "my-class".&lt;/p&gt;</code>
+          </pre>
+        <p>CSS:</p>
+            <pre>
+              <code>
+                .my-class {
+                  color: red;
+                  font-weight: bold;
+                  }
+              </code>
+            </pre>
+        <p>In this example, the CSS code selects all elements with the class name my-class and applies the following styles:</p>
+            <ul>
+              <li><code>color:red;</code>sets the text color of elements with the class <code>my-class</code> to red.</li>
+              <li><code>font-weight: bold;</code>sets the font weight of elements with the class <code>my-class</code> to bold.</li>
+            </ul>
+        We can use the same class on multiple elements, allowing us to apply consistent styles to them all at once.</li>
+      <li>An <b>ID Selector</b> is like a special name given to a specific element on a webpage. It's like saying, "Hey, I want to style this one particular element!" We create an ID by adding <b>a hash <code>(#)</code></b> before its name.
+        <p>HTML: </p>
+        <pre>
+          <code>&lt;p id="my-id"&gt;This paragraph has the ID "my-id".&lt;/p&gt;</code>
+        </pre>
+        <p>CSS: </p>
+          <pre>
+            <code>
+              #my-id {
+                color: blue;
+                font-size: 18px;
+              }
+            </code>
+          </pre>
+          <p>In this example, the CSS code selects the element with the ID <code>my-id</code> and applies the following styles:</p>
+            <ul>
+              <li><code>color: blue;</code>sets the text color of the element with the ID <code>my-id</code> to blue.</li>
+              <li><code>font-size: 18px;</code> sets the font size of the element with the ID <code>my-id</code> to 18 pixels.</li>
+            </ul>
+        Like <code> #my-id </code>, IDs are unique and should only be used once on a page. We can apply styles specifically to that element using the ID selector. ID Selectors are helpful when we want to style a specific element with a unique design or behavior, such as giving a particular section a distinct background color or applying special formatting to a specific heading.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="common_properties">
+      <header>Common Properties</header>
+      <p>While there are over 100 different CSS properties, it is very likely that you will work with these ones the most:</p>
+      <ol>
+        <li><code>color:</code> It's the color of the text you see on a website, like choosing a crayon color for your words.</li>
+        <li><code>background-color:</code>It's the color behind the text or the whole page, like picking a color to paint the background of your drawing.</li>
+        <p>Both <code>color</code> and <code>background-color</code> can accept one of several kinds of values:</p>
+          <ul>
+            <li>A keyword, such as an actual color name like <code>red</code> or <code>yellow</code></li>
+            <li>HEX</li>
+            <li>RGB</li>
+            <li>HSL</li>
+            <pre><code class="language-css">
+              p{
+                /*keyword example*/
+                color: red;
+                /* hex example */
+                color: #1100ff;
+              /* rgb example: */
+                color:rgb(0, 100, 127);
+               /* hsl example: */
+                color: hsl(15, 82%, 56%);
+              }
+            </code>
+          </pre>
+          </ul>
+        <li><code>font-size:</code> determines how big or small the text appears, similar to choosing the size of your letters when you write</li>
+        <li><code>margin:</code> controls the space around an element, like adding extra room between objects on a shelf.</li>
+        <li><code>padding:</code> controls the space inside an element, like the empty space you leave around your drawing on a piece of paper.</li>
+        <li><code>width:</code> sets how wide an element should be, like stretching or shrinking a rectangle to make it wider or narrower.</li>
+        <li><code>height:</code> sets how tall an element should be, like stretching or shrinking a rectangle to make it taller or shorter.</li>
+        <li><code>border:</code> creates a line around an element, like drawing a frame around a picture.</li>
+        <li><code>display:</code> determines how an element should be shown, like choosing whether to hang a painting on the wall or place it on a table.</li>
+        <li><code>position:</code> decides where an element should be placed on the web page, like arranging objects in different spots on a table.</li>
+      </ol>
+    </section>
+    <section class="main-section" id="linking_our_html_and_css">
+      <header>Linking our HTML and CSS</header>
+      <p>To add CSS to your HTML, you have a few options:</p>
+      <ol>
+        <li>Inline CSS: You can add CSS directly to HTML elements using the "style" attribute. For example:
+          <pre>
+            <code>&lt;p style="color: red; font-size: 18px;"&gt;This is a red paragraph with a font size of 18 pixels.&lt;/p&gt;</code>
+          </pre>
+        </li>
+        <li>
+          Internal CSS: You can include CSS code within the <code>&lt;style></code> tags in the <code>&lt;head></code> section of your HTML file. For example:
+          <pre>
+            <code>&lt;head&gt;
+              &lt;style&gt;
+                p {
+                  color: red;
+                  font-size: 18px;
+                }
+              &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;p&gt;This is a red paragraph with a font size of 18 pixels.&lt;/p&gt;
+            &lt;/body&gt;</code>
+          </pre>
+        </li>
+        <li>External CSS: Create a separate CSS file with a .css extension, like "styles.css". Then, link it to your HTML file using the <code>&lt;link></code> tag in the <code>&lt;head></code> section. For example:</li>
+            <pre>
+              <code>&lt;head&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;p&gt;This is a red paragraph with a font size of 18 pixels.&lt;/p&gt;
+              &lt;/body&gt;</code>
+            </pre>
+      </ol>
+    </section>
+    <section class="main-section" id="references">
+      <header>References</header>
+      <ul>
+        <li>
+          <a class="ref-link" href="https://www.theodinproject.com/lessons/foundations-intro-to-css">Documentation and image taken from "The Odin Project"</a>
+        </li>
+      </ul>
+
+    </section>
+  </main> 
+</body>
+</html>
